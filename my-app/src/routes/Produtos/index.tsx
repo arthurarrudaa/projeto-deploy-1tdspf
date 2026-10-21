@@ -5,7 +5,7 @@ import CardProduto from "../../components/CardProduto";
 import { FaEdit as Editar } from "react-icons/fa";
 import { MdDeleteForever as Excluir } from "react-icons/md";
 
-const API_URL = "https://script.google.com/macros/s/AKfycbxxGEi-uPZC8-n5N1bi28yyliVPqCFZ0gBhFsrKSlJPgcHD8tFQ9FRmglIjuX9_Ys1Q/exec"
+const API_URL = import.meta.env.VITE_API_URL;    // "https://script.google.com/macros/s/AKfycbxxGEi-uPZC8-n5N1bi28yyliVPqCFZ0gBhFsrKSlJPgcHD8tFQ9FRmglIjuX9_Ys1Q/exec"
 
 
 export default function Produtos() {
@@ -42,9 +42,7 @@ export default function Produtos() {
     carregaProdutos();
   }, []);
 
-  //Apresente a lista de produtos em CARDS utilizando PROPS...
-
-
+  
   const handleDelete = async (id: string) => {
     try {
 
